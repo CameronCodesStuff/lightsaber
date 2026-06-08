@@ -1,5 +1,5 @@
 const GIF_URL = 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTZyYWl4bWxpMzJmNnhyZWlsaGt1NmVraDZtNjE1azY3NHRpZ29hMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/SmYqlOh9GtnuAe4SwB/giphy.gif';
-const API_KEY  = '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';
+const API_KEY  = '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';
 const SYSTEM   = `You are LightSaber AI — a razor-sharp, darkly powerful AI assistant with the presence of a seasoned Force wielder. You are brilliant, direct, and commanding. Answer questions with precision and depth. You may occasionally reference the Force or Star Wars themes if it fits naturally, but primarily you are an elite, capable AI assistant who gets things done.`;
 
 (function initBg() {
