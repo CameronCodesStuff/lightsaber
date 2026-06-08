@@ -45,8 +45,8 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;   
-  padding-bottom: 12vh;
+  justify-content: center;
+  padding-bottom: 0;
   gap: 0;
   overflow: hidden;
 }
@@ -102,7 +102,7 @@ html, body {
   transform: translateY(120px);
   animation: saberRise 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
   filter: drop-shadow(0 0 80px rgba(255, 26, 26, 0.35));
-  margin-bottom: 48px;
+  margin-bottom: 32px;
 }
 @keyframes saberRise {
   to { opacity: 1; transform: translateY(0); }
