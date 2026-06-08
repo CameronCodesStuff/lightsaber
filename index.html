@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LightSaber AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+  <canvas id="bgCanvas"></canvas>
+
+  
+  <div id="loader">
+    <div id="loaderStars"></div>
+    <div class="loader-scan"></div>
+    <div class="loader-sweep"></div>
+
+    
+    <div class="loader-saber" id="loaderSaber">
+      <div class="l-blade-wrap">
+        <div class="l-blade"></div>
+      </div>
+      <div class="l-hilt">
+        <div class="l-hilt-detail"></div>
+      </div>
+      <div class="l-floor"></div>
+    </div>
+
+    
+    <div class="loader-text-wrap">
+      <img
+        src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTZyYWl4bWxpMzJmNnhyZWlsaGt1NmVraDZtNjE1azY3NHRpZ29hMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/SmYqlOh9GtnuAe4SwB/giphy.gif"
+        alt="LightSaber AI Logo"
+        class="loader-gif-logo"
+      >
+      <div class="loader-main-title">Light<em>Saber</em> AI</div>
+      <div class="loader-tagline">The dark side of intelligence</div>
+      <div class="loader-progress"><div class="loader-progress-bar"></div></div>
+    </div>
+  </div>
+
+  
+  <div id="app">
+
+    <header class="app-header">
+      <div class="header-logo">
+        <img
+          src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTZyYWl4bWxpMzJmNnhyZWlsaGt1NmVraDZtNjE1azY3NHRpZ29hMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/SmYqlOh9GtnuAe4SwB/giphy.gif"
+          alt="Logo"
+          class="header-gif"
+        >
+        <div class="header-title-block">
+          <div class="header-title">Light<em>Saber</em> AI</div>
+          <div class="header-sub">Dark Side Intelligence</div>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="header-stat">
+          <div class="header-stat-label">Model</div>
+          <div class="header-stat-val">GPT-4o</div>
+        </div>
+        <div class="status-pill">
+          <div class="status-pulse"></div>
+          <div class="status-label">Online</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="chat-area" id="chatArea">
+      <div class="chat-inner" id="chatInner">
+        <div class="empty-state" id="emptyState">
+          <img
+            src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTZyYWl4bWxpMzJmNnhyZWlsaGt1NmVraDZtNjE1azY3NHRpZ29hMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/SmYqlOh9GtnuAe4SwB/giphy.gif"
+            alt="LightSaber AI"
+            class="empty-gif"
+          >
+          <div class="empty-title">Light<em>Saber</em> AI</div>
+          <div class="empty-tagline">The Force awaits your command.<br>Ask anything. I cut through the dark.</div>
+          <div class="hex-deco">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-zone">
+      <div class="input-inner">
+        <div class="input-box">
+          <textarea
+            id="input"
+            placeholder="Channel the Force..."
+            rows="1"
+            onkeydown="handleKey(event)"
+            oninput="autoResize(this)"
+          ></textarea>
+          <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </button>
+        </div>
+        <div class="input-footer">LightSaber AI &middot; The Dark Side of Intelligence</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
