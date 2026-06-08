@@ -4,21 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LightSaber AI</title>
+  <!-- GIF favicon via canvas trick -->
+  <link id="favicon" rel="icon" type="image/gif" href="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTZyYWl4bWxpMzJmNnhyZWlsaGt1NmVraDZtNjE1azY3NHRpZ29hMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/SmYqlOh9GtnuAe4SwB/giphy.gif">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  
+  <!-- background particle canvas -->
   <canvas id="bgCanvas"></canvas>
 
-  
+  <!-- SABER FIGHT CANVAS -->
+  <canvas id="fightCanvas"></canvas>
+
+  <!-- LOADER -->
   <div id="loader">
     <div id="loaderStars"></div>
     <div class="loader-scan"></div>
     <div class="loader-sweep"></div>
 
-    
     <div class="loader-saber" id="loaderSaber">
       <div class="l-blade-wrap">
         <div class="l-blade"></div>
@@ -29,7 +33,6 @@
       <div class="l-floor"></div>
     </div>
 
-    
     <div class="loader-text-wrap">
       <img
         src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTZyYWl4bWxpMzJmNnhyZWlsaGt1NmVraDZtNjE1azY3NHRpZ29hMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/SmYqlOh9GtnuAe4SwB/giphy.gif"
@@ -42,7 +45,7 @@
     </div>
   </div>
 
-  
+  <!-- APP -->
   <div id="app">
 
     <header class="app-header">
@@ -60,7 +63,7 @@
       <div class="header-right">
         <div class="header-stat">
           <div class="header-stat-label">Model</div>
-          <div class="header-stat-val">GPT-4o</div>
+          <div class="header-stat-val">Claude Sonnet</div>
         </div>
         <div class="status-pill">
           <div class="status-pulse"></div>
