@@ -270,6 +270,19 @@ const SYSTEM    = `You are LightSaber AI — a razor-sharp, darkly powerful AI a
 })();
 
 window.addEventListener('load', () => {
+  const soundtrack = document.getElementById('soundtrack');
+  soundtrack.volume = 0.4;
+  soundtrack.play().catch(() => {
+    // Autoplay blocked — play on first user interaction
+    const unlock = () => {
+      soundtrack.play();
+      document.removeEventListener('click', unlock);
+      document.removeEventListener('keydown', unlock);
+    };
+    document.addEventListener('click', unlock);
+    document.addEventListener('keydown', unlock);
+  });
+
   setTimeout(() => {
     const loader = document.getElementById('loader');
     loader.classList.add('out');
